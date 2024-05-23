@@ -1,14 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("./src/index");
+function createAndLogCircle(circleRadius) {
+    const circle = new index_1.RoundShape(circleRadius);
+    console.log(`A circle with radius ${circleRadius} has an area of ${circle.calculateArea()} and a circumference of ${circle.calculateCircumference()}
+    \nA sphere with a radius of ${circleRadius} has a volume of ${circle.calculateVolume()} and a surface area of ${circle.calculateSurfaceArea()}\n`);
+}
+function createAndLogSquare(squareLength) {
+    const square = new index_1.SquareShape(squareLength);
+    console.log(`A square with length ${squareLength} has an area of ${square.getArea()} and a circumference of ${square.getPerimeter()}
+  \nA cube with a radius of ${squareLength} has a volume of ${square.getVolume()} and a surface area of ${square.getSurfaceArea()}`);
+}
 function main() {
-    let radius = Math.floor(Math.random() * 10 + 1);
-    let length = Math.floor(Math.random() * 10 + 1);
-    let shapeRound = new index_1.RoundShape(radius);
-    let shapeSquare = new index_1.SquareShape(length);
-    console.log(`A circle with radius ${radius} has an area of ${shapeRound.calculateArea()} and a circumference of ${shapeRound.calculateCircumference()} 
-    \nA sphere with a radius of ${radius} has a volume of ${shapeRound.calculateVolume()} and a surface area of ${shapeRound.calculateSurfaceArea()}\n`);
-    console.log(`A square with length ${length} has an area of ${shapeSquare.getArea()} and a circumference of ${shapeSquare.getPerimeter()} 
-  \nA cube with a radius of ${length} has a volume of ${shapeSquare.getVolume()} and a surface area of ${shapeSquare.getSurfaceArea()}`);
+    // const circleRadius = Math.floor(Math.random() * 10 + 1);
+    // const squareLength = Math.floor(Math.random() * 10 + 1);
+    // createAndLogCircle(circleRadius);
+    // createAndLogSquare(squareLength);
+    // const romanNumeral = 'MCMXCIV';
+    const romanNumeral = 'MMCDXXV';
+    const result1 = new index_1.romanNumeralsToIntergers().romanToInt(romanNumeral);
+    console.log(`The integer value of the Roman numeral ${romanNumeral} is ${result1}.`);
+    const result2 = new index_1.romanNumeralsToIntergers2().romanToInt(romanNumeral);
+    console.log(`The integer value of the Roman numeral ${romanNumeral} is ${result2}.`);
 }
 main();

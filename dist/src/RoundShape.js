@@ -21,5 +21,5 @@ class RoundShape {
         return this.surfaceArea;
     }
 }
-RoundShape.PI = Math.PI.toPrecision(2);
+RoundShape.PI = Math.PI;
 exports.default = RoundShape;

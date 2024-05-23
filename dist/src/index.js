@@ -17,11 +17,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SquareShape = exports.RoundShape = void 0;
+exports.romanNumeralsToIntergers2 = exports.romanNumeralsToIntergers = exports.SquareShape = exports.RoundShape = void 0;
 const RoundShape_1 = __importDefault(require("./RoundShape"));
 exports.RoundShape = RoundShape_1.default;
 const SquareShape_1 = require("./SquareShape");
 Object.defineProperty(exports, "SquareShape", { enumerable: true, get: function () { return SquareShape_1.SquareShape; } });
+const romanNumeralsToIntergers_1 = require("./romanNumeralsToIntergers");
+Object.defineProperty(exports, "romanNumeralsToIntergers", { enumerable: true, get: function () { return romanNumeralsToIntergers_1.romanNumeralsToIntergers; } });
+Object.defineProperty(exports, "romanNumeralsToIntergers2", { enumerable: true, get: function () { return romanNumeralsToIntergers_1.romanNumeralsToIntergers2; } });
 require("./2D/types");
 require("./2D/calculations");
 __exportStar(require("./2D/types"), exports);
